@@ -1,3 +1,7 @@
+
+li{
+  text-transform: capitalize;
+}
 .container {
   width: 920px;
   padding: 20px;
@@ -13,11 +17,12 @@
   font-size: 20px;
   line-height: 20px;
 }
-
-.sun-icon {
-  color: yellow;
+.weather-icon{
+  width: 50px;
+  height: 50px;
   margin-left: 70px;
 }
+
 .todays-temperature {
   font-size: 100px;
   color: #3d0240;
@@ -67,6 +72,10 @@
   border: 2px solid #3d0240;
   background-color: #ffd3b6;
   color: #3d0240;
+}
+.description{
+  display: inline-block;
+  list-style: none
 }
 
 .card {
