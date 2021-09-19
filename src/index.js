@@ -26,7 +26,6 @@ return ` ${day} ${hours}:${minutes}`
 function displayTemperature(response){
   console.log(response.data);
   let temperatureElement=document.querySelector("#todays-temperature");
-  temperatureElement.innerHTML=Math.round(response.data.main.temp);
   let cityElement=document.querySelector("#split");
   cityElement.innerHTML=response.data.name
   let descriptionElement = document.querySelector("#weather-description");
@@ -40,6 +39,9 @@ function displayTemperature(response){
   let iconElement=document.querySelector("#icon");
   iconElement.setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`); 
   iconElement.setAttribute("alt", response.data.weather[0].description);
+  
+  celsiusTemperature=response.data.main.temp
+  temperatureElement.innerHTML=Math.round(celsiusTemperature);
 }
 function search(city){
   let apiKey = "afe9ee1dd9602aa3cd50d8dcf4b72270";
@@ -56,8 +58,30 @@ function searching (event){
 
 }
 
+function showFahrenTemperature(event){
+  event.preventDefault();
+  let temperatureElement= document.querySelector("#todays-temperature");
+  let fahrenTemp= (celsiusTemperature*9)/5+32;
+  temperatureElement.innerHTML=Math.round(fahrenTemp)
+}
 
-search("new York")
+function showCelsiusTemperature(event){
+  event.preventDefault();
+  let temperatureElement=document.querySelector("#todays-temperature");
+  temperatureElement.innerHTML=Math.round(celsiusTemperature)
+}
+
+
+let celsiusTemperature=null;
 
 let form =document.querySelector("#form-search");
 form.addEventListener("submit", searching);
+
+let fahrenLink= document.querySelector("#fahrenButton");
+fahrenLink.addEventListener("click", showFahrenTemperature)
+
+let celsiusLink = document.querySelector("#celsiusButton");
+celsiusLink.addEventListener("click", showCelsiusTemperature);
+
+
+search("new York")
