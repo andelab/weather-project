@@ -1,5 +1,4 @@
-
-li{
+li {
   text-transform: capitalize;
 }
 
@@ -19,33 +18,33 @@ li{
   line-height: 20px;
 }
 
-.weather-icon{
-  width: 50px;
-  height: 50px;
-  margin-left: 70px;
-}
-
 .todays-temperature {
   font-size: 100px;
   color: #3d0240;
   font-family: "Roboto Condensed", sans-serif;
+  margin-left: 50px;
 }
 .location-city {
   font-size: 45px;
   text-align: center;
   color: #3d0240;
-  padding-top: 30px;
+  padding-top: 25px;
+  padding-bottom: 5px;
   font-weight: 600;
   font-family: "Roboto Condensed", sans-serif;
   margin: 0px;
 }
 
-.day {
-  font-size: 30px;
-  text-align: center;
-  color: #3d0240;
-  font-weight: 600;
+.description {
+  display: inline-block;
+  padding-left: 127px;
+  list-style: none;
+}
+.conditions {
+  font-size: 15px;
   font-family: "Roboto Condensed", sans-serif;
+  color: #3d0240;
+  font-weight: lighter;
 }
 
 .toplomjer {
@@ -55,7 +54,7 @@ li{
 }
 
 .controls {
-  margin-left: 150px;
+  margin-left: 180px;
 }
 
 .degrees-type {
@@ -74,10 +73,6 @@ li{
   border: 2px solid #3d0240;
   background-color: #ffd3b6;
   color: #3d0240;
-}
-.description{
-  display: inline-block;
-  list-style: none
 }
 
 .card {

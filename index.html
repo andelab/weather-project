@@ -43,24 +43,10 @@
       <div class="row">
         <div class="col">
           <p class="todays-temperature">
-            <img
-              class="icon"
-              src=""
-              alt=""
-              id="icon"            />
+            <img class="icon" src="" alt="" id="icon" />
             <span id="todays-temperature"> </span>
           </p>
-        </div>
-
-        <div class="col">
-          <p class="location-city" id="split"></p>
-
-          <p class="day"> Last update: <span id="dan">
-
-          </span> </p>
-        </div>
-
-        <p class="controls">
+            <p class="controls">
           <i class="fas fa-thermometer-half toplomjer"></i>
 
           <button
@@ -78,15 +64,25 @@
             °F
           </button>
         </p>
-        <ul class="description">
-          <li> Weather description: <span id="weather-description"></span>
-          <li>
-            Humidity: <span id="humidity"></span> %
-            </li>
-             <li>
-            Wind: <span id="wind"></span> km/h
-            </li>
-        </ul>
+          
+        </div>
+
+        <div class="col">
+          <p class="location-city" id="split"></p>
+
+          
+          <ul class="description">
+            <span class="conditions">
+              <li>Last update: <span id="dan"> </span> </li>
+              <li>Weather description: <span id="weather-description"></span></li>
+              <li>Humidity: <span id="humidity"></span> %</li>
+              <li>Wind: <span id="wind"></span> km/h</li>
+            </span>
+          </ul>
+          
+        </div>
+       
+        
       </div>
       <hr />
 
