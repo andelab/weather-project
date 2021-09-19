@@ -24,7 +24,6 @@ return ` ${day} ${hours}:${minutes}`
 
 
 function displayTemperature(response){
-  console.log(response.data);
   let temperatureElement=document.querySelector("#todays-temperature");
   let cityElement=document.querySelector("#split");
   cityElement.innerHTML=response.data.name
@@ -72,6 +71,21 @@ function showCelsiusTemperature(event){
 }
 
 
+function showPosition(position){
+  let latitude= position.coords.latitude;
+  let longitude= position.coords.longitude;
+  let apiKey = "afe9ee1dd9602aa3cd50d8dcf4b72270";
+  let apiUrlgeo=`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`
+  
+  axios.get(apiUrlgeo).then(displayTemperature);
+}
+function gerCurrentPosition(){
+  navigator.geolocation.getCurrentPosition(showPosition);
+}
+
+let button = document.querySelector("#location-button");
+button.addEventListener("click",gerCurrentPosition)
+
 let celsiusTemperature=null;
 
 let form =document.querySelector("#form-search");
@@ -85,3 +99,5 @@ celsiusLink.addEventListener("click", showCelsiusTemperature);
 
 
 search("new York")
+
+
