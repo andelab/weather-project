@@ -46,102 +46,44 @@
             <img class="icon" src="" alt="" id="icon" />
             <span id="todays-temperature"> </span>
           </p>
-            <p class="controls">
-          <i class="fas fa-thermometer-half toplomjer"></i>
+          <p class="controls">
+            <i class="fas fa-thermometer-half toplomjer"></i>
 
-          <button
-            type="button"
-            class="btn btn-light degrees-type"
-            id="celsiusButton"
-          >
-            °C
-          </button>
-          <button
-            type="button"
-            class="btn btn-light degrees-type"
-            id="fahrenButton"
-          >
-            °F
-          </button>
-        </p>
-          
+            <button
+              type="button"
+              class="btn btn-light degrees-type"
+              id="celsiusButton"
+            >
+              °C
+            </button>
+            <button
+              type="button"
+              class="btn btn-light degrees-type"
+              id="fahrenButton"
+            >
+              °F
+            </button>
+          </p>
         </div>
 
         <div class="col">
           <p class="location-city" id="split"></p>
 
-          
           <ul class="description">
             <span class="conditions">
-              <li>Last update: <span id="dan"> </span> </li>
-              <li>Weather description: <span id="weather-description"></span></li>
+              <li>Last update: <span id="dan"> </span></li>
+              <li>
+                Weather description: <span id="weather-description"></span>
+              </li>
               <li>Humidity: <span id="humidity"></span> %</li>
               <li>Wind: <span id="wind"></span> km/h</li>
             </span>
           </ul>
-          
         </div>
-       
-        
       </div>
       <hr />
 
-      <div class="row">
-        <div class="card" style="width: 10.5rem">
-          <div class="card-body">
-            <h5 class="card-title-days">Monday</h5>
-            <p class="card-text">
-              <i class="fas fa-sun little-sun-icon"></i>
-            </p>
-            <p class="daily-temperature">29 °C</p>
-            <a href="#" class="btn btn-primary button-more">More</a>
-          </div>
-        </div>
-
-        <div class="card" style="width: 10.5rem">
-          <div class="card-body">
-            <h5 class="card-title-days">Tuesday</h5>
-            <p class="card-text">
-              <i class="fas fa-cloud cloud-icon"></i>
-            </p>
-            <p class="daily-temperature">29 °C</p>
-            <a href="#" class="btn btn-primary button-more">More</a>
-          </div>
-        </div>
-
-        <div class="card" style="width: 10.5rem">
-          <div class="card-body">
-            <h5 class="card-title-days">Wednesday</h5>
-            <p class="card-text">
-              <i class="fas fa-cloud cloud-icon"></i>
-            </p>
-            <p class="daily-temperature">28 °C</p>
-            <a href="#" class="btn btn-primary button-more">More</a>
-          </div>
-        </div>
-
-        <div class="card" style="width: 10.5rem">
-          <div class="card-body">
-            <h5 class="card-title-days">Thursday</h5>
-            <p class="card-text">
-              <i class="fas fa-cloud-showers-heavy cloud-rain-icon"></i>
-            </p>
-            <p class="daily-temperature">24 °C</p>
-            <a href="#" class="btn btn-primary button-more">More</a>
-          </div>
-        </div>
-
-        <div class="card" style="width: 10.5rem">
-          <div class="card-body">
-            <h5 class="card-title-days">Friday</h5>
-            <p class="card-text">
-              <i class="fas fa-cloud-rain cloud-rain-icon"></i>
-            </p>
-            <p class="daily-temperature">21 °C</p>
-            <a href="#" class="btn btn-primary button-more">More</a>
-          </div>
-        </div>
-      </div>
+      <div class="weather-forecast" id="forecast"></div>
     </div>
     <div class="coder">
       <a href="https://github.com/andelab/weather-project" target="blank">
