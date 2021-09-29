@@ -77,22 +77,30 @@ li {
 
 .card {
   border: 1px solid #3d0240;
-  margin-left: 10px;
+  margin-top: 10px;
+  padding-top: 5px;
 }
 
 .card-title-days {
-  font-size: 21px;
+  font-size: 23px;
   text-align: center;
+  color: #3d0240;
   font-family: "Roboto Condensed", sans-serif;
   font-weight: bolder;
 }
 
 .icons{
-  margin-left: 40px;
+  margin-left: 20px;
+  padding-top: 10px;
+  
 }
 
 .daily-temperature{
   text-align: center;
+  color: #3d0240;
+  font-size: 18px;
+  font-family: "Roboto Condensed", sans-serif;
+  padding-top: 10px;
 }
 
 .coder {
